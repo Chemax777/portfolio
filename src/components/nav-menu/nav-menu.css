@@ -1,0 +1,115 @@
+.header {
+    background: #1C1C1C;
+
+}
+
+.header__container {
+    width: 95%;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Гамбургер иконка */
+.menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    display: none;
+}
+
+.menu-btn span {
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFB742;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+}
+
+.menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu li {
+    list-style-type: none;
+    list-style-type: none;
+    font-size: 1.8rem;
+}
+
+.menu a {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .5s;
+}
+
+.menu a:hover {
+    color: #FFB742;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    /* Меню, которое будет появляться */
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        background: #131312d3;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+    }
+
+    .menu ul {
+        padding-top: 8rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+        overflow: hidden;
+    }
+
+}
