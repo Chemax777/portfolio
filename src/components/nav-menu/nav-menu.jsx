@@ -46,7 +46,7 @@ function NavMenu() {
                                 <li className='menu-list__item'><a href="#works">portfolio</a></li>
                                 <li className='menu-list__item'><a href="#contacts">contact</a></li>
                                 <li className="content__about__description__hire-button menu-list__item">
-                                    <a href="https://drive.google.com/uc?export=download&id=1BN72-0AFrZkFOwV60nFv0wmsDNebSSSe">Download CV</a>
+                                    <a href="https://drive.google.com/uc?export=download&id=1NqbJNnTMnJQgNpkGWtlEIS5VehxvZcay">Download CV</a>
                                 </li>
                             </ul>
                         </nav>
